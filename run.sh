@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ -z "$OPENAI_API_KEY" ]; then
+    echo "Error: OPENAI_API_KEY environment variable is not set"
+    exit 1
+fi
+
 # Add project root to PYTHONPATH
 export PYTHONPATH=$PYTHONPATH:$(pwd)
 
